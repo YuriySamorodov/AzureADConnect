@@ -1,0 +1,2 @@
+IIF(isPresent([mail]),[mail],(Word([userPrincipalName],1,"@")&"@contoso.com"))
+IIF(IsNullOrEmpty([mail]),(Word([userPrincipalName],1,"@")&"@eaglerocks.com"),[mail])
