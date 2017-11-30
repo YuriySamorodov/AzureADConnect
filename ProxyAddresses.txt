@@ -1,0 +1,1 @@
+IIF(IsNullOrEmpty([proxyAddresses]),RemoveDuplicates(Split(("SMTP:"&[userPrincipalName]&";"&("smtp:"&(Word([userPrincipalName],1,"@")&"@seymourpowell.co.uk"))),";")),RemoveDuplicates(Split("smtp:"&(Replace(Replace(Join([proxyAddresses],";"),"smtp:",""),";",";smtp:"))&";"&"SMTP:"&[userPrincipalName]&";"&("smtp:"&(Word([userPrincipalName],1,"@")&"@seymourpowell.co.uk")),";")))
